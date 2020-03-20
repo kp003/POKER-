@@ -11,7 +11,7 @@ main.o: main.cpp *.h
 CARD.o: CARD.cpp *.h
 	$(CXX) $(CXXFLAGS) -c CARD.cpp $(GTKFLAGS) -o CARD.o
 DEALER.o: DEALER.cpp *.h 
-	$(CXX) $(CXXFLAGS) -c DEALER.cpp $(GTKFLAGS) -o DEALER.o
+	$(CXX) $(CXXFLAGS) -c DEALER.cpp -o DEALER.o
 GAME.o: GAME.cpp *.h 
 	$(CXX) $(CXXFLAGS) -c GAME.cpp $(GTKFLAGS) -o GAME.o
 HAND.o: HAND.cpp *.h
