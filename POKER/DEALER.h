@@ -6,7 +6,6 @@
 #include <string>
 #include <vector>
 #include <iostream>
-#include <gtkmm.h>
 
 
 using namespace std;
@@ -15,7 +14,7 @@ using namespace std;
   * 
   */
 
-class DEALER:public Gtk::Window
+class DEALER
 {
 public:
   // Constructors/Destructors
@@ -136,23 +135,7 @@ public:
   {
   }
 
-protected:
-  // Static Protected attributes
-  //  
-
-  // Protected attributes
-  //  
-
-  Gtk::Label Winner;
-  Gtk::Label Player1;
-  Gtk::Label Player2;
-
-  // Protected attribute accessor methods
-  //  
-
-
-  // Protected attribute accessor methods
-  //  
+//  
 
 
   
