@@ -1,5 +1,5 @@
 CXXFLAGS += --std=c++17
-GTKFLAGS = `/usr/bin/pkg-config gtkmm-3.0 --cflags --libs`
+GTKFLAGS = `pkg-config gtkmm-3.0 --cflags --libs`
 
 all: poker
 
@@ -17,9 +17,9 @@ GAME.o: GAME.cpp *.h
 HAND.o: HAND.cpp *.h
 	$(CXX) $(CXXFLAGS) -c HAND.cpp -o HAND.o
 PLAYER.o: PLAYER.cpp *.h
-	$(CXX) $(CXXFLAGS) -c PLAYER.cpp -o PLAYER.o
+	$(CXX) $(CXXFLAGS) -c PLAYER.cpp $(GTKFLAGS) -o PLAYER.o
 SPECTATOR.o: SPECTATOR.cpp *.h
-	$(CXX) $(CXXFLAGS) -c SPECTATOR.cpp -o SPECTATOR.o
+	$(CXX) $(CXXFLAGS) -c SPECTATOR.cpp $(GTKFLAGS) -o SPECTATOR.o
 
 
 clean:
